@@ -25,3 +25,10 @@ def make_readable(sec):
     else:
         a += '00'
     return a
+
+#
+
+def make_readable(sec):
+    _min,sec = divmod(sec,60)
+    hour,_min = divmod(_min,60)
+    return '{:02}:{:02}:{:02}'.format(hour,_min,sec)
